@@ -1,13 +1,269 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.outline-border-none{
+    outline: none;
+    border: none;
 }
+
+.font-400{
+    font-weight: 400;
+}
+
+/* LOGIN */
+.login-row-container{
+    /* border: solid 5px black; */
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+}
+
+.login-row-container .col{
+    /* border: solid 1px red; */
+    grid-row-start: auto;
+    grid-row-end: auto;
+    margin: 0;
+}
+
+.login-row-container .col .image-wrapper{
+    /* border: solid 1px blue; */
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 52px;
+}
+.login-row-container .col .hero-content{
+    /* border: 1px solid red; */
+    font-family: 'Aldrich';
+    display: flex;
+    flex-wrap: wrap;
+    width: 450px;
+}
+
+.col .hero-content .title{
+    font-size: 40px;
+    width: 450px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    color: white;
+    background-color: #4E944F;
+}
+
+.col .hero-content .title p{
+    /* border: solid 1px red; */
+    margin-left: 7px;
+}
+
+.col .hero-content:nth-child(3){
+    /* border: solid 1px black; */
+    /* width: 73%; */
+    width: 692px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.col .hero-content .sub-title{
+    font-size: 20px;
+    font-weight: 300;
+    font-family: 'DM Sans';
+    line-height: 25px;
+    text-align: justify;
+    width: 568px;
+    /* border: 1px solid green; */
+}
+
+.col .hero-content .sub-title p{
+    /* border: solid 1px red; */
+    padding: 10px 10px;
+    margin-top: 10px;
+}
+
+.doctor-image-container{
+    /* border: solid 1px red; */
+    display: flex;
+    justify-content: center;
+}
+
+/* LOGIN FORM */
+.col:nth-child(2){
+    display: flex;
+    justify-content: flex-end;
+    /* border: solid 1px black; */
+}
+
+.col .login-form-container{
+    /* border: solid 1px red; */
+    margin-top: 50px;
+    height: 870px;
+    width: 720px;
+    background-color: #4E944F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    border-bottom-left-radius: 250px;
+    border-top-left-radius: 250px;
+}
+
+.col .form-content-wrapper{
+    /* border: solid 1px red; */
+    height: 518px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.greeting-info{
+    /* border: 1px black solid; */
+    font-family: "DM Sans";
+    width: 100%;
+}
+
+.greeting-info h2, .greeting-info p{
+    /* border: solid 1px yellowgreen; */
+    font-weight: 500;
+    text-align: center;
+    font-size: 40px;
+    color: #ffffff;
+    margin-top: 15px;
+    margin-bottom: 10px
+}
+
+.greeting-info p{
+    font-weight: 400;
+    font-style: italic;
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+/* LOGIN INPUT */
+.login-form-wrapper .input-wrapper{
+    position: relative;
+    /* border: solid 1px orange; */
+    width: 99%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 5px;
+}
+
+.login-form-wrapper .input-wrapper input{
+    height: 50px;
+    width: 100%;
+    border-radius: 10px;
+    position: absolute;
+    border: 1px solid #E9EFC040;
+    text-indent: 10px;
+    background-color: #E9EFC040;
+    color: #ffffff;
+}
+
+.login-form-wrapper .input-wrapper input::placeholder{
+    color: #ffffff;
+    /* font-weight: 200; */
+}
+
+.login-form-wrapper .input-wrapper label {
+    position: relative;
+    align-self: flex-start;
+    color: #ffffff;
+    font-weight: 400;
+    left: 10px;
+    font-family: "DM Sans";
+}
+
+/* REMEMBER FORGOT PASSWORD*/
+.rm-fp-container{
+    /* border: solid 1px pink; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 99%;
+}
+
+.rm-fp-container a, .rm-fp-container .rm-wrapper label{
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: "DM Sans";
+}
+
+.rm-fp-container .rm-wrapper{
+    /* border: solid 1px white; */
+    display: flex;
+    align-items: center;
+}
+
+.rm-fp-container .rm-wrapper label{
+    margin-left: 5px;
+}
+
+.rm-fp-container input{
+    height: 25px;
+    width: 25px;
+}
+
+/* LOGIN BUTTON */
+.btn-wrapper{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* border: solid 1px white; */
+    font-family: "DM-Sans";
+}
+
+.btn-wrapper button{
+    background-color: #B4E197;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    height: 50px;
+    width: 80%;
+    border: none;
+    border-radius: 5px;
+    color: #000000BF;
+}
+
+.btn-wrapper button:hover{
+    background-color: #000000BF;
+    color: #B4E197;
+}
+
+/* eye button */
+.login-form-wrapper .input-wrapper button svg:hover{
+    cursor: pointer;
+}
+
+#eye{
+    background-color: transparent;
+    border: none;
+    position: relative;
+    left: 380px;
+    top: 2px;
+} 
+
+#eye:hover, #login-checkbox:hover, #login-btn{
+    cursor: pointer;
+}
+
+
+
