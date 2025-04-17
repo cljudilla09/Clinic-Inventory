@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/clinic-inventory/static/css/main.e6c13ad2.css",
+    "main.js": "/clinic-inventory/static/js/main.ffd8fe13.js",
+    "static/js/453.8b8dc643.chunk.js": "/clinic-inventory/static/js/453.8b8dc643.chunk.js",
+    "index.html": "/clinic-inventory/index.html",
+    "main.e6c13ad2.css.map": "/clinic-inventory/static/css/main.e6c13ad2.css.map",
+    "main.ffd8fe13.js.map": "/clinic-inventory/static/js/main.ffd8fe13.js.map",
+    "453.8b8dc643.chunk.js.map": "/clinic-inventory/static/js/453.8b8dc643.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.ffd8fe13.js"
+  ]
+}
