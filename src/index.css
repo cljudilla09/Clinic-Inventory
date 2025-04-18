@@ -12,10 +12,6 @@
     border: none;
 }
 
-.font-400{
-    font-weight: 400;
-}
-
 /* LOGIN */
 .login-row-container{
     /* border: solid 5px black; */
@@ -146,7 +142,7 @@
 }
 
 .greeting-info p{
-    font-weight: 400;
+    /* font-weight: 400; */
     font-style: italic;
     font-size: 22px;
     margin-top: 0;
@@ -185,7 +181,6 @@
     position: relative;
     align-self: flex-start;
     color: #ffffff;
-    font-weight: 400;
     left: 10px;
     font-family: "DM Sans";
 }
@@ -199,9 +194,13 @@
     width: 99%;
 }
 
+.rm-fp-container a, .rm-fp-container .rm-wrapper label, 
+.login-form-wrapper .input-wrapper label, .greeting-info p {
+    font-weight: 400;
+}
+
 .rm-fp-container a, .rm-fp-container .rm-wrapper label{
     color: #ffffff;
-    font-weight: 400;
     font-size: 16px;
     font-family: "DM Sans";
 }
@@ -232,9 +231,12 @@
 }
 
 .btn-wrapper button{
+    font-weight: 700;
+}
+
+.btn-wrapper button{
     background-color: #B4E197;
     font-size: 18px;
-    font-weight: 700;
     text-align: center;
     height: 50px;
     width: 80%;
@@ -267,3 +269,4 @@
 
 
 
+/* SIDEBAR */

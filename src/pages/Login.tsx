@@ -3,24 +3,21 @@ import Image from "../components/image-component/image"
 import Input from "../features/Login/input"
 import Button from "../components/button-component/button"
 import images_ from "../data/images"
-import { useState } from "react"
+import { useEyeClick, useLoginClick } from "../hooks/handleClick"
+import { useChangeFieldLogin } from "../hooks/handleChange"
 
 const { login : {clinicLogo : {name : clinic_alt, src: logo}, 
-    doctorImg : {name: doc_alt, src: dctr_img}}, 
-    eye : {hide : {name : h_eye, src: e_hide}, show : {name : s_eye, src: e_show}}
+    doctorImg : {name: doc_alt, src: dctr_img}}
 } = images_
 
 
 export default function Login(){
-
-    const [clickEye, setClickEye] = useState(false)
-
-    function handleEyeClick(){
-        console.log("Clicked") 
-        setClickEye((prevEyeBool) => {
-            return !prevEyeBool
-        })
-    }
+    // state for eye buttonns
+    const { isShown, handleEyeClick } = useEyeClick();
+    // state for fields 
+    const { credentials, setCredentials, handleChange } = useChangeFieldLogin();
+    // handle simple Auth
+    const { handleAuthLogin } = useLoginClick(credentials.email, credentials.password, setCredentials);
 
     return (
         <div className="login-row-container">
@@ -58,15 +55,20 @@ export default function Login(){
                         <div className="form-container">
                             <form action="" className="login-form-wrapper">
                                 <Input labelFor="email" labelText="Email" 
-                                    type="text" placeholder="Enter Email Address"
-                                    id="email" name="email"
+                                    type="email" placeholder="eg. spencerso@gmail.com"
+                                    id="email" name="email" 
+                                    onChangeField = { handleChange }
+                                    value={credentials.email}
                                 />
                                 <Input labelFor="password" labelText="Password" 
-                                    type={clickEye === false ? "password" : "text"} 
-                                    placeholder="Enter Password"
+                                    type={isShown === false ? "password" : "text"} 
+                                    placeholder="eg. p@ssWord123"
                                     id="password" name="password"
                                     onChecked={ handleEyeClick }
-                                    onClickedEye = { clickEye }
+                                    onClickedEye = { isShown }
+                                    onChangeField = { handleChange }
+                                    value={credentials.password}
+                                    
                                 />
                                 <div className="rm-fp-container">
                                     <div className="rm-wrapper">
@@ -76,6 +78,7 @@ export default function Login(){
                                     <a href="test#.com">Forgot Password?</a>
                                 </div>
                                 <Button 
+                                    onChecked={ handleAuthLogin }
                                     id="login-btn" 
                                     type="submit" 
                                     elementText="Log In"

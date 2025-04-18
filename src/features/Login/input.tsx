@@ -15,6 +15,9 @@ export default function Input(props: any){
                 placeholder={props.placeholder} 
                 id={props.id}
                 name={props.name}
+                value={props.value}
+                // required
+                onChange={props.onChangeField}
             />
             { props.name === "password" && 
                 <button id="eye" type="button" onClick={props.onChecked}>
