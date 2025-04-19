@@ -3,11 +3,11 @@ import { useState } from 'react';
 
 const {cred : {email : user_email, password : user_pass}} = credentials
 
-export function useEyeClick() {
+export function useToggleVisibility() {
 
   const [isShown, setIsShown] = useState(false);
 
-  function handleEyeClick(){
+  function handleToggleVisibility(){
     //  console.log("Clicked") 
     setIsShown((previousValue) => {
         // console.log("boolean us shown state: " + isShown)
@@ -16,16 +16,17 @@ export function useEyeClick() {
     })
   };
   
-  return { isShown, handleEyeClick };
+  return { isShown, handleToggleVisibility };
 }
 
-export function useLoginClick(email : string, password : string, fnc : any){
+export function useLoginSubmit(email : string, password : string, fnc : any){
     
-    function handleAuthLogin(event : any){
+    function handleLogin(event : any){
         //simple validation for testsing
         if(email === user_email && password == user_pass){
             console.log("Login successful")
-            window.location.href = 'https://www.youtube.com/watch?v=nI8PYZNFtac';
+            // try navigating here when logged in
+            window.location.href = 'http://localhost:3000/Dashboard-url';
         }else{
             console.log("login failed")
         }
@@ -38,5 +39,5 @@ export function useLoginClick(email : string, password : string, fnc : any){
         event.preventDefault()
     }
 
-    return { handleAuthLogin }
+    return { handleLogin }
 }
