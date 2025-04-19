@@ -1,9 +1,9 @@
 import Hero from "../features/Login/hero"
-import Image from "../components/image-component/image"
+import Image from "../components/image-component/image-component"
 import Input from "../features/Login/input"
-import Button from "../components/button-component/button"
+import Button from "../components/button-component/button-component"
 import images_ from "../data/images"
-import { useEyeClick, useLoginClick } from "../hooks/handleClick"
+import { useToggleVisibility, useLoginSubmit } from "../hooks/handleClick"
 import { useChangeFieldLogin } from "../hooks/handleChange"
 
 const { login : {clinicLogo : {name : clinic_alt, src: logo}, 
@@ -13,11 +13,11 @@ const { login : {clinicLogo : {name : clinic_alt, src: logo},
 
 export default function Login(){
     // state for eye buttonns
-    const { isShown, handleEyeClick } = useEyeClick();
+    const { isShown, handleToggleVisibility } = useToggleVisibility();
     // state for fields 
     const { credentials, setCredentials, handleChange } = useChangeFieldLogin();
     // handle simple Auth
-    const { handleAuthLogin } = useLoginClick(credentials.email, credentials.password, setCredentials);
+    const { handleLogin } = useLoginSubmit(credentials.email, credentials.password, setCredentials);
 
     return (
         <div className="login-row-container">
@@ -64,7 +64,7 @@ export default function Login(){
                                     type={isShown === false ? "password" : "text"} 
                                     placeholder="eg. p@ssWord123"
                                     id="password" name="password"
-                                    onChecked={ handleEyeClick }
+                                    onChecked={ handleToggleVisibility }
                                     onClickedEye = { isShown }
                                     onChangeField = { handleChange }
                                     value={credentials.password}
@@ -78,7 +78,7 @@ export default function Login(){
                                     <a href="test#.com">Forgot Password?</a>
                                 </div>
                                 <Button 
-                                    onChecked={ handleAuthLogin }
+                                    onChecked={ handleLogin }
                                     id="login-btn" 
                                     type="submit" 
                                     elementText="Log In"

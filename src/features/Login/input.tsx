@@ -1,4 +1,4 @@
-import Image from "../../components/image-component/image"
+import Image from "../../components/image-component/image-component"
 import images_ from "../../data/images"
 
 const { eye : { hide : {name : h_eye, src: e_hide}, 
