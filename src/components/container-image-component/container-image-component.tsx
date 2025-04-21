@@ -1,5 +1,5 @@
 import Image from "../image-component/image-component"
-import Paragraph from "../paragraph-component/paragraph-component"
+import Paragraph from "../paragraph-component/ContentParagraph"
 
 export default function ContainerImage(props : any){
     return (

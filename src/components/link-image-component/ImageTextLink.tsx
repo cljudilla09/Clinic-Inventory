@@ -1,9 +1,9 @@
 import Image from "../image-component/image-component"
-import Paragraph from "../paragraph-component/paragraph-component"
+import Paragraph from "../paragraph-component/ContentParagraph"
 
 export default function LinkImage(props : any){
     return (
-        <a href={props.href}>
+        <a href={props.href} >
             <Image 
                 className={props.className}
                 src={props.src}

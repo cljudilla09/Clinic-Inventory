@@ -1,9 +1,9 @@
 
-import LinkImage from "../../components/link-image-component/link-image-component"
+import LinkImage from "../../components/link-image-component/ImageTextLink"
 
 export default function List(props : any){
     return (
-            <li className="list-btn">
+            <li className="list-btn" onClick={props.onCheckedText}>
                 <LinkImage 
                     className="image-wrapper"
                     href={props.href}
@@ -12,6 +12,7 @@ export default function List(props : any){
                     h="30"
                     alt={props.alt}
                     text={props.text}
+                    onCheckedText={props.onCheckedText}
                 /> 
             </li>
     )

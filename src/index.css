@@ -7,9 +7,18 @@
     
 }
 
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
 .outline-border-none{
     outline: none;
     border: none;
+}
+
+.transparent{
+    background-color: transparent;
 }
 
 /* LOGIN */
@@ -222,7 +231,7 @@
 
 /* LOGIN BUTTON */
 .btn-wrapper{
-    margin: 20px;
+    margin: 50px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -251,7 +260,7 @@
 }
 
 /* eye button */
-.login-form-wrapper .input-wrapper button svg:hover{
+.login-form-wrapper .input-wrapper button svg:hover, .widget-wrapper button{
     cursor: pointer;
 }
 
@@ -472,5 +481,92 @@
     margin-left: 10px;
 }
 
+/* HEADING */
+.heading-container{
+    border: 1.5px solid #00000040;
+    height: 100px;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    top: 25px;
+    border-radius: 10px;
+    box-shadow: #00000040 0px 2px 8px 0px;
+}
 
+.heading-wrapper{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-self: center;
+    /* border: 1px solid orange; */
+}
 
+.heading-container .heading-wrapper h1{ 
+    font-size: 40px;
+    /* padding-left: 40px; */
+    width: 20%;
+    /* border: solid red 1px; */
+    margin-left: 25px;
+    /* text-align: center; */
+}
+
+.widget-wrapper{
+    /* border: 1px solid red; */
+    height: 100px;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 25px;
+    flex-wrap: wrap-reverse;
+}
+
+.search-icon-wrapper{
+    /* border: solid 1px brown; */
+    display: flex;
+    align-items: center;
+    margin-right: 60px;
+}
+
+.dm-sans-f{
+    font-family: "DM Sans";
+}
+
+.fw-700{
+    font-weight: 700;
+}
+
+.color-4E944F{
+    color: #4E944F;
+}
+
+#search-input{
+    width: 350px;
+    height: 50px;
+    padding: 0px 10px 0px 50px;
+    box-sizing: border-box;
+    border: 1.5px solid #00000040;
+    border-radius: 10px;
+}
+
+#search-input::placeholder{
+    font-size: 16px;
+    font-weight: 400;
+    color: #00000080;
+}
+
+.search-btn{
+    position: relative;
+    left: 40px;
+}
+
+.b-p-wrapper{
+    /* border: solid 1px green; */
+    display: flex;
+}
+
+.b-p-wrapper button:nth-child(1){
+    margin-right: 60px;
+}

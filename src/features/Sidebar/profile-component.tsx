@@ -1,4 +1,4 @@
-import LinkImage from "../../components/link-image-component/link-image-component"
+import LinkImage from "../../components/link-image-component/ImageTextLink"
 export default function Profile(props : any){
     return (
         <div className="profile-setting-wrapper">

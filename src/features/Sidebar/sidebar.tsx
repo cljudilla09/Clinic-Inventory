@@ -18,7 +18,7 @@ const {
 } = images_
 
 
-export default function Sidebar(){
+export default function Sidebar(props: any){
     //handle the showing and hiding of the profile
     const { isShown, handleToggleVisibility } = useToggleVisibility();
     const checkVisibility =  isShown ? "visible" : "hidden"
@@ -38,12 +38,13 @@ export default function Sidebar(){
                 <div className="btn-wrapper">
                     <ul>
                         {/* Dashboard Navigation Buttons */}
-                        { dashboardImgBtn.map((item, index) => {
-                            return <List key={index}
+                        { dashboardImgBtn.map((item) => {
+                            return <List 
                                         href={item.href}
                                         src={item.img}
                                         alt={item.alt}
                                         text={item.text}
+                                        onCheckedText={ props.onCheckedText }
                                     />
                             })
                         }
@@ -86,8 +87,8 @@ export default function Sidebar(){
                         />
                     </div>
                     {/* Profile Drop Up */}
-                    { profileImgBtn.map((item, index) => {
-                        return <Profile key={index}
+                    { profileImgBtn.map((item) => {
+                        return <Profile
                                     href={item.href}
                                     src={item.img}
                                     alt={item.alt}
