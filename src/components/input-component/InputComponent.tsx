@@ -1,4 +1,4 @@
-export default function Input(props: any){
+export default function InputComponent(props: any){
     return <input 
         id={props.id}
         type={props.type} 

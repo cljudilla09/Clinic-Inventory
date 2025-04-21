@@ -1,5 +1,5 @@
-import Input from "../../components/input-component/input-component"
-import Image from "../../components/image-component/image-component"
+import InputComponent from "../../components/input-component/InputComponent"
+import ImageComponent from "../../components/image-component/ImageComponent"
 import images_ from "../../data/images"
 
 const { heading : [bell_icon, search_icon, person_icon] } = images_
@@ -17,21 +17,25 @@ export default function Heading(props : any){
                     <form>
                         <div className="search-icon-wrapper"> 
                         {/* should be wrapped with a button tag? */}
-                            <Image 
+                            <ImageComponent 
                                 className="search-btn"
                                 src={searchIcon}
                                 width="22.52"
                                 height="22.52"
                                 alt={search_Alt}
                             />
-                            <Input id="search-input" type="search" placeholder="Search..."/>
+                            <InputComponent
+                                id="search-input" 
+                                type="search" 
+                                placeholder="Search..."
+                            />
                         </div>
                     </form>
                     {/* this should be clickable */}
                     {/* we can try mapping this one */}
                    <div className="b-p-wrapper">
                     <button className="transparent outline-border-none">
-                        <Image 
+                        <ImageComponent 
                                 src={bellIcon}
                                 width="40"
                                 height="40"
@@ -39,7 +43,7 @@ export default function Heading(props : any){
                             />
                     </button>
                     <button className="transparent outline-border-none">
-                        <Image 
+                        <ImageComponent 
                                 src={personImage}
                                 width="40"
                                 height="40"

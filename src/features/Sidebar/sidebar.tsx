@@ -1,7 +1,7 @@
-import Image from "../../components/image-component/image-component"
-import List from "./list-component"
-import Profile from "./profile-component"
-import ContainerImage from "../../components/container-image-component/container-image-component"
+import ImageComponent from "../../components/image-component/ImageComponent"
+import List from "./List"
+import Profile from "./Profile"
+import ImageParagraphComponent from "../../components/image-paragraph-component/ImageParagraphComponent"
 import images_ from "../../data/images"
 import { useToggleVisibility } from "../../hooks/handleClick"
 
@@ -27,7 +27,7 @@ export default function Sidebar(props: any){
         <div className="side-bar-container">
             <div className="side-bar-wrapper">
                 <div className="heading-btn-wrapper">
-                    <ContainerImage 
+                    <ImageParagraphComponent 
                         className_D="logo-header-wrapper"
                         className_P="h1-heading"
                         className="image-wrapper"
@@ -53,7 +53,7 @@ export default function Sidebar(props: any){
             </div>
                 <div className="user-profile">
                     {/* Profile */}
-                    <ContainerImage 
+                    <ImageParagraphComponent 
                             className_D="profile"
                             className_P="profile-name"
                             className="image-profile-wrapper"
@@ -62,7 +62,7 @@ export default function Sidebar(props: any){
                             text="Spencer"
                         />
                     <button className="carret-btn" onClick={ handleToggleVisibility }>
-                        <Image 
+                        <ImageComponent 
                             className="image-wrapper"
                             src={isShown ? carretDown : carretUp}
                             width="18"
@@ -76,7 +76,7 @@ export default function Sidebar(props: any){
                 <div className="profile-settings">
                     <div className="profile-setting-wrapper">
                         {/* Profile with Email Address */}
-                        <ContainerImage 
+                        <ImageParagraphComponent 
                             className_D="profile-info"
                             className_P="profile-name"
                             className="image-profile-wrapper"
