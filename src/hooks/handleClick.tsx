@@ -10,8 +10,6 @@ export function useToggleVisibility() {
   function handleToggleVisibility(){
     //  console.log("Clicked") 
     setIsShown((previousValue) => {
-        // console.log("boolean us shown state: " + isShown)
-        // console.log("handle eye function: " + handleEyeClick)
         return !previousValue
     })
   };
@@ -40,4 +38,19 @@ export function useLoginSubmit(email : string, password : string, fnc : any){
     }
 
     return { handleLogin }
+}
+
+
+export function useTextChangeOnClick(defaultText: string){
+
+    const [textValue, setTextValue] = useState(defaultText)
+
+    function updateTextOnClick(event : any){
+        const newText = event.target.text
+        // console.log(event.target.value)
+        setTextValue(newText)
+        event.preventDefault()
+    }
+
+    return {textValue, updateTextOnClick }
 }

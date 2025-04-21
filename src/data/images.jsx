@@ -13,6 +13,9 @@ import profile from '../assets/sidebar-images/profile.png'
 import person from '../assets/sidebar-images/person.png'
 import cog from '../assets/sidebar-images/cog.png'
 import logout from '../assets/sidebar-images/logout.png'
+import bell from '../assets/heading-images/bell.png'
+import search from '../assets/heading-images/search.png'
+import personHeading from '../assets/heading-images/personHeading.png'
 
 const images_ = {
     login : {
@@ -46,6 +49,12 @@ const images_ = {
     carretBtns : [
         { img: carretUp, alt: "carret up icon"},
         { img: carretDown, alt: "carret down icon"},
+    ],
+
+    heading : [
+        {img: bell, alt: "bell icon"},
+        {img: search, alt: "search icon"},
+        {img: personHeading, alt: "person icon"}
     ]
 }
 
