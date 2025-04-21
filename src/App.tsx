@@ -1,7 +1,7 @@
 import React from 'react';
 import Login from './pages/Login';
-import Sidebar from './features/Sidebar/sidebar';
-import Heading from './features/Heading/heading';
+import Sidebar from './features/Sidebar/Sidebar';
+import Heading from './features/Heading/Heading';
 import { useTextChangeOnClick } from './hooks/handleClick';
 
 
@@ -10,16 +10,16 @@ function App() {
 
   return (
     <div className="container">
-      {/* <Login /> */}
+      <Login />
 
         {/* <Sidebar 
           onCheckedText={ updateTextOnClick }
           
-        /> */}
+        />
           
         <Heading 
           text={textValue}
-        /> 
+        />  */}
     </div>
   );
 }

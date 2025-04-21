@@ -1,17 +1,17 @@
-import Image from "../image-component/image-component"
-import Paragraph from "../paragraph-component/ContentParagraph"
+import ImageComponent from "../image-component/ImageComponent"
+import ParagraphComponent from "../paragraph-component/ParagraphComponent"
 
 export default function LinkImage(props : any){
     return (
         <a href={props.href} >
-            <Image 
+            <ImageComponent 
                 className={props.className}
                 src={props.src}
                 width={props.w} 
                 height={props.h}
                 alt={props.alt}
             />
-            <Paragraph text={props.text} />
+            <ParagraphComponent text={props.text} />
         </a>
     )
 }

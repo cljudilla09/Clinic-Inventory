@@ -1,4 +1,4 @@
-export default function Image(props : any){
+export default function ImageComponent(props : any){
     return (
         <div className={props.className}>
             <img 

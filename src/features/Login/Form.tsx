@@ -1,4 +1,4 @@
-import Image from "../../components/image-component/image-component"
+import Image from "../../components/image-component/ImageComponent"
 import images_ from "../../data/images"
 
 const { eye : { hide : {name : h_eye, src: e_hide}, 
@@ -6,7 +6,7 @@ const { eye : { hide : {name : h_eye, src: e_hide},
 } = images_
 
 
-export default function Input(props: any){
+export default function Form(props: any){
     return (
         <div className="input-wrapper">
             <label htmlFor={props.labelFor}>{props.labelText}</label> 

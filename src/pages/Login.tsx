@@ -1,7 +1,7 @@
-import Hero from "../features/Login/hero"
-import Image from "../components/image-component/image-component"
-import Input from "../features/Login/input"
-import Button from "../components/button-component/button-component"
+import Hero from "../features/Login/Hero"
+import ImageComponent from "../components/image-component/ImageComponent"
+import Form from "../features/Login/Form"
+import ButtonComponent from "../components/button-component/ButtonComponent"
 import images_ from "../data/images"
 import { useToggleVisibility, useLoginSubmit } from "../hooks/handleClick"
 import { useChangeFieldLogin } from "../hooks/handleChange"
@@ -22,7 +22,7 @@ export default function Login(){
     return (
         <div className="login-row-container">
             <div className="col">
-                <Image 
+                <ImageComponent 
                     className="image-wrapper"
                     src={logo}
                     width="130"
@@ -37,7 +37,7 @@ export default function Login(){
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
                         when an unknown printer took a galley of type and scrambled it to make a type specimen book" 
                 />
-                 <Image 
+                 <ImageComponent 
                     className="doctor-image-container"
                     src={dctr_img}
                     width="500"
@@ -54,13 +54,13 @@ export default function Login(){
                         </div>
                         <div className="form-container">
                             <form action="" className="login-form-wrapper">
-                                <Input labelFor="email" labelText="Email" 
+                                <Form labelFor="email" labelText="Email" 
                                     type="email" placeholder="eg. spencerso@gmail.com"
                                     id="email" name="email" 
                                     onChangeField = { handleChange }
                                     value={credentials.email}
                                 />
-                                <Input labelFor="password" labelText="Password" 
+                                <Form labelFor="password" labelText="Password" 
                                     type={isShown === false ? "password" : "text"} 
                                     placeholder="eg. p@ssWord123"
                                     id="password" name="password"
@@ -77,7 +77,7 @@ export default function Login(){
                                     </div>
                                     <a href="test#.com">Forgot Password?</a>
                                 </div>
-                                <Button 
+                                <ButtonComponent 
                                     onChecked={ handleLogin }
                                     id="login-btn" 
                                     type="submit" 

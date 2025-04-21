@@ -1,4 +1,4 @@
-export default function Button(props : any){
+export default function ButtonComponent(props : any){
     return ( 
         <div className="btn-wrapper">
             <button 
