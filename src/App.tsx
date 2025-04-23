@@ -10,16 +10,15 @@ function App() {
 
   return (
     <div className="container">
-      <Login />
+      {/* <Login /> */}
 
-        {/* <Sidebar 
+        <Sidebar 
           onCheckedText={ updateTextOnClick }
-          
         />
           
         <Heading 
           text={textValue}
-        />  */}
+        /> 
     </div>
   );
 }
